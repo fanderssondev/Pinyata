@@ -61,6 +61,9 @@ const config: Config = {
          },
          gridTemplateColumns: {
             header: '1fr auto 1fr'
+         },
+         rotate: {
+            270: '270deg'
          }
       }
    },
