@@ -9,13 +9,10 @@ const config: Config = {
       container: {
          center: true,
          padding: {
-            DEFAULT: '2rem',
-            sm: '2rem',
-            lg: '8rem',
+            DEFAULT: '4rem',
+
          },
-         screens: {
-            "2xl": "1400px"
-         }
+
       },
       extend: {
          colors: {

@@ -2,15 +2,29 @@
 	import '../app.css';
 	import Sun from 'lucide-svelte/icons/sun';
 	import Moon from 'lucide-svelte/icons/moon';
+	import { useTheme } from '$lib/stores/useTheme.svelte';
+
+	let theme = useTheme();
+
+	$effect(() => {
+		theme.darkMode;
+		document.documentElement.classList.toggle('dark');
+	});
 </script>
 
-<button class="absolute right-5 top-5"><Moon /></button>
+<button onclick={theme.toggleDarkmode} class="absolute right-5 top-5">
+	{#if theme.darkMode}
+		<Sun />
+	{:else}
+		<Moon />
+	{/if}
+</button>
 
 <header class="max-w-full bg-slate-600 py-3">
-	<div class="lg:grid-cols-header container grid items-center">
+	<div class="container grid items-center lg:grid-cols-header">
 		<img src="/pinata.svg" alt="Pinyata logo" class="mr-auto size-10" />
 		<h1
-			class="font-montserrat mr-auto hidden text-4xl font-semibold text-slate-900 lg:inline-block"
+			class="mr-auto hidden font-montserrat text-4xl font-semibold text-slate-900 lg:inline-block"
 		>
 			Pinyata Store
 		</h1>
@@ -25,9 +39,6 @@
 	</div>
 </header>
 
-<main class="container min-h-screen">
-	<Sun />
-	<Moon />
-</main>
+<main class="container min-h-screen">sdghosgoag</main>
 
 <slot />
