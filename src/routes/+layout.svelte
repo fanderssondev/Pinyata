@@ -10,8 +10,9 @@
 	let theme = useTheme();
 
 	$effect(() => {
-		theme.darkMode;
-		document.documentElement.classList.toggle('dark');
+		theme.darkMode
+			? document.documentElement.classList.add('dark')
+			: document.documentElement.classList.remove('dark');
 	});
 </script>
 
@@ -34,7 +35,7 @@
 	<div class="container grid items-center lg:grid-cols-header">
 		<img src="/pinata.svg" alt="Pinyata logo" class="mr-auto size-10" />
 		<h1
-			class="mr-auto hidden font-montserrat text-4xl font-semibold text-slate-900 lg:inline-block"
+			class="mr-auto hidden font-montserrat text-4xl font-semibold tracking-wider text-slate-900 lg:inline-block"
 		>
 			Pinyata Store
 		</h1>
