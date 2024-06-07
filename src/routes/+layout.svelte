@@ -1,6 +1,10 @@
-<script>
+<script lang="ts">
 	import '../app.css';
+	import Sun from 'lucide-svelte/icons/sun';
+	import Moon from 'lucide-svelte/icons/moon';
 </script>
+
+<button class="absolute right-5 top-5"><Moon /></button>
 
 <header class="max-w-full bg-slate-600 py-3">
 	<div class="lg:grid-cols-header container grid items-center">
@@ -21,6 +25,9 @@
 	</div>
 </header>
 
-<main class="container min-h-screen">gjhg</main>
+<main class="container min-h-screen">
+	<Sun />
+	<Moon />
+</main>
 
 <slot />

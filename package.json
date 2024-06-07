@@ -2,7 +2,7 @@
 	"name": "pinyata",
 	"version": "0.0.1",
 	"private": true,
-   "type": "module",
+	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
@@ -37,6 +37,7 @@
 	},
 	"dependencies": {
 		"clsx": "^2.1.1",
+		"lucide-svelte": "^0.390.0",
 		"tailwind-merge": "^2.3.0",
 		"tailwind-variants": "^0.2.1"
 	}
