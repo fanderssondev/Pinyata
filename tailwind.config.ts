@@ -9,8 +9,7 @@ const config: Config = {
       container: {
          center: true,
          padding: {
-            DEFAULT: '4rem',
-
+            DEFAULT: '1rem',
          },
 
       },
